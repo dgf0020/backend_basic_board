@@ -7,7 +7,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "user")
+@Table(name = "\"user\"")
+// H2에서 user는 예약어. 그래서 테이블을 user로 만들 수 없다.
 public class User {
 
 	@Id
