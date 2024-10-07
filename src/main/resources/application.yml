@@ -8,10 +8,16 @@ spring:
     console:
       enabled: true
       path: /h2-console
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
-    hibernate:
-        ddl-auto: update
-    show-sql: true
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.H2Dialect
+#    hibernate:
+#        ddl-auto: update
+#    show-sql: true
+
+mybatis:
+  mapper-locations: classpath:mapper/**/*.xml  # 매퍼 XML 파일 경로 설정
+  type-aliases-package: com.board.basic.board.entity  # 도메인 클래스가 위치한 패키지
+#  configuration:
+#    map-underscore-to-camel-case: true  # DB 필드명이 스네이크 케이스일 때 카멜 케이스로 자동 매핑

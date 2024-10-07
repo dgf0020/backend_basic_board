@@ -1,20 +1,26 @@
 package com.board.basic.board.domain.web.board.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+//import jakarta.persistence.Entity;
+//import jakarta.persistence.GeneratedValue;
+//import jakarta.persistence.GenerationType;
+//import jakarta.persistence.Id;
+//import jakarta.persistence.Table;
 
-@Entity
-@Table(name = "board")
+import lombok.Getter;
+import lombok.Setter;
+
+import java.sql.Date;
+
+//@Entity
+//@Table(name = "board")
+@Getter
+@Setter
 public class Board {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	//@Id
+	//@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int idx, view;
+	private String title, contents, nick;
+	private Date w_date;
 
-	// 게시판 제목
-	// 게시판 내용
-	// 게시판 작성자
 }
